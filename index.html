@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="'viewport" content="width= device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Aidiel Ziat</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- add script code from fontawesome.com -->
+    <script src="https://kit.fontawesome.com/0715e96a7f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/az_logo.png" class="logo">
+            <!-- ul = unordered list -->
+            <!-- add id=sidemenu -->
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#notes">Notes</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <!-- add function open and close menu -->
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>AI/ML Enthusiast</p>
+            <h1>Hi, I'm <span>Aidiel</span><br>Ziat from Malaysia</h1>
+        </div>
+    </div>
+</div>
+
+<!-- --------------About---------------- -->
+<div id="About">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.png" alt="">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p> Input description... </p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                    <p class="tab-links" onclick="opentab('skills')">Skills</p>                   
+                </div>
+                <div class="tab-contents active-tab" id="experience">
+                    <ul>
+                        <li><span>UI?UX</span><br>Designing </li>
+                        <li><span>Web Dev</span><br>Designing </li>
+                        <li><span>App Dev</span><br>Designing </li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2019</span><br>Designing </li>
+                        <li><span>2018</span><br>Designing </li>
+                        <li><span>2017</span><br>Designing </li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="skills">
+                    <ul>
+                        <li><span>UI?UX</span><br>Designing </li>
+                        <li><span>Web Dev</span><br>Designing </li>
+                        <li><span>App Dev</span><br>Designing </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- --------------Portfolio---------------- -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">Professional Experience</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work-1.png">
+                <div class="layer">
+                    <h3>Work 1</h3>
+                    <p>Description 1</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-2.png">
+                <div class="layer">
+                    <h3>Work 1</h3>
+                    <p>Description 2</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-3.png">
+                <div class="layer">
+                    <h3>Work 1</h3>
+                    <p>Description 3</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+
+</div>
+
+
+
+<!-- --------------Notes---------------- -->
+<div id="notes"></div>
+    <div class="container">
+        <h1 class = "sub-title">Notes</h1>
+        <div class="notes-list">
+            <div>
+                <i class="fa-solid fa-calculator"></i>
+                <h2>Maths & Stats</h2>
+                <p>Description1</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-network-wired"></i>
+                <h2>Machine Learning</h2>
+                <p>Description2</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-microchip"></i>
+                <h2>Deep Learning</h2>
+                <p>Description3</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- --------------Contact---------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>  aidiel.haikal0708@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>  +6(0) 19 854 0708</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href=""><i class="fa-brands fa-square-instagram"></i></i></a>
+                    <a href=""><i class="fa-brands fa-facebook"></i></i></i></a>                
+                </div>
+                <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © AidielZiat.</p>
+    </div>
+</div>
+
+
+
+<script>
+    // because we have added classname at line 44
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+
+<script>
+    // variable
+    var sidemenu = document.getElementById("sidemenu");
+
+    // function
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyM9FQlUFod07D4f5mMPQE81pfRCzuxd6Ccx9AWxq9xtO-ctkwYwELbVjizu82gxRAU6g/exec'
+    const form = document.forms['submit-to-google-sheet']
+    
+    const msg = document.getElementById("msg")
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            // add message to indicate successful submission of message
+            msg.innerHTML = "Message sent successfully!"
+            setTimeout(function(){
+                msg.innerHTML = ""
+                // message disappear after 500s
+            }, 5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+</body>
+</html>
