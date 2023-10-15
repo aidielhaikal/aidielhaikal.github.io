@@ -1,0 +1,623 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/abstract-digital.jpg);
+    background-size: cover;
+    background-position: center;
+    background-color: #00151a;
+    color: #fff;
+}
+
+#background-invert {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(images/abstract-digital.jpg);
+    background-size: cover;
+    background-position: center;
+    transform: scaleY(-1);  /* Flip the background image upside down  */
+    z-index: -1; /* Place it behind the content */
+  }
+  
+
+/* use # since this is an "ID" */
+#header{
+    width: 100%;
+    height: 100vh;
+    /* background-image: url(images/abstract-digital.jpg);
+    background-size: cover;
+    background-position: center; */
+    color: #fff;
+}
+
+#header .container{
+    /* 10px up,down; 10% left,right  */
+    padding: 0;
+}
+
+/* to navigate the menu  */
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* .logo-text{
+    font-size: 25px;
+    font-weight: bold;
+    position: fixed;
+    top: 1em;
+    left: 2em;
+}
+.logo-text span{
+    color: gold;
+}
+/* .logo{
+    width: 100px;
+} */ 
+
+
+/* New Top bar */
+.topnav {
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    background-color: #012e33;
+    overflow: hidden;
+    width: 100%;
+    top: 0;
+    z-index: 3;
+  }
+
+.topnav a{
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/* Add class for left-aligned link */
+.topnav a.left {
+    padding: 14px 70px;
+    float: left;
+}
+
+/* Add class for right-aligned links container */
+.right-links {
+    float: right;
+}
+
+/* Adjust the styles for right-aligned links */
+.right-links a {
+    float: left; /* Make the individual links within the container float left */
+    margin-left: 10px; /* Add some spacing between them */
+}
+
+.topnav a span{
+    color: gold;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+
+
+/* Initial top bar 
+nav ul{
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #012e33;
+    width: 100%; 
+    z-index: 3; 
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a p{
+    font-size: 25px;
+    font-weight: bold;
+    position: fixed;
+    top: 0.35em;
+    left: 2em;
+}
+
+nav ul li a span{
+    color: gold;
+}
+
+nav ul li a p span{
+    color: gold;
+}
+
+nav ul li a{
+    top: 0.15em;
+    color: #E8E8E8;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    left: 43em;
+}
+
+
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li b::after{
+    content: '';
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+end of initial top bar */
+
+.header-text{
+    padding: 0% 70px;
+    margin-top: 20%;
+    font-size: 30px;
+}
+
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+.header-text h1 span{
+    color: gold;
+}
+
+
+/* -------------- About ----------------- */
+#About{
+    /* to add padding */
+    padding: 80px 0;
+    color: #e8e5e5;
+}
+
+#About .container{
+    /* 10px up,down; 10% left,right  */
+    padding: 0px 5%;
+} 
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    flex-basis: 35%;
+}
+
+.about-col-1 img{
+    margin-top: 20px;
+    width: 100%;
+    /* round corner */
+    border-radius: 15px;
+}
+
+.about-col-2{
+    /* set 5% for margin */
+    flex-basis: 60%;
+}
+
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: #e8e5e5;
+}
+
+#About .about-col-2 .about-me-text {
+    background-color: #00151a;
+    border-radius: 10px; /* Adjust the value to control the roundness */
+    padding: 20px; /* Add padding for spacing within the box */
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-titles p{
+    background-color: none;
+
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: gold;
+    position: absolute;
+    left: 0;
+    bottom:-8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after{
+    width: 50%;
+}
+
+.tab-contents ul li{
+    /* font-family: Arial, sans-serif; */
+    background-color: #00151a;
+    list-style: none;
+    font-size: 15px;
+    margin: 10px 0;
+}
+
+
+.tab-contents ul li span{
+    background-color: none;
+    color: #E7CD78 ;
+    font-size: 16px;
+}
+
+.tab-contents ul li span.orange {
+    color: #F5E8BE; /* Set the text color to orange for specific spans */
+}
+
+
+/* to hide all the contents */
+.tab-contents{
+    display: none;
+}
+
+/* display object by block */
+.tab-contents.active-tab{
+    display: block;
+}
+
+/* 
+-------------- Portfolio -----------------
+#portfolio{
+    padding: 50px 0;
+}
+
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.layer{
+    width: 100%;
+    /* to hide, change this to 0% 
+    height: 0%;
+    background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    /* add transition effect 
+    transition: height 0.5s;
+}
+
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+*/
+/* ref icon  
+.layer a{
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.work:hover img{
+    transform: scale(1.1);
+}
+
+.work:hover .layer{
+    height: 100%;
+}
+*/
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #00ffff;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.btn:hover{
+    background: #00ffff;
+
+} 
+
+
+
+/* -------------- Notes ----------------- */
+#notes{
+    padding: 50px 0;
+}
+
+#notes .container{
+    /* 10px up,down; 10% left,right  */
+    padding: 0px 5%;
+} 
+
+.notes-list{
+    padding: 0px 5%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.notes-list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.notes-list div i{
+    font-size: 45px;
+    margin-bottom: 30px;
+}
+
+#notes + .container .sub-title {
+    padding: 0 5%; /* Adjust the padding as needed */
+}
+
+.notes-list div h2{
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.notes-list div a{
+    font-weight: bold;
+    text-decoration: underline;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+
+.notes-list div:hover{
+    background: #00ffff;
+    color: black;
+    transform: translateY(-10px);
+}
+
+.notes-list div:hover a {
+    text-decoration: underline;
+    font-weight: bold;
+    color: black;
+}
+
+/* -------------- Contact ----------------- */
+#contact .container{
+    /* 10px up,down; 10% left,right  */
+    padding: 0px 5%;
+} 
+
+.contact-left{
+    flex-basis: 35%;
+    margin-top: 100px;
+}
+
+.contact-right{
+    flex-basis: 60%;
+    margin-top: 100px;
+}
+
+.contact-left p{
+    margin-top: 30px;
+}
+
+.contact-left p i{
+    color: #00ffff;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.social-icons{
+    margin-top: 30px;
+}
+
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.social-icons a:hover{
+    color: #00ffff;
+    transform: translateY(-5px);
+}
+
+.btn.btn2{
+    display: inline-block;
+    background: #00ffff;
+    color: black;
+    font-weight: bold;
+}
+
+.contact-right form{
+    width: 100%;
+}
+
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+/* -------------- CSS for small screen ----------------- */
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .topnav .left{
+        padding: 10px;
+        font-size: 25px;
+        float: left;
+        margin: 0 4px;
+    }
+    .topnav .icon {
+        display: block;
+        float: right;
+    }
+    .topnav.responsive .right-links {
+        display: none;
+
+    }
+
+
+    /* ------- Header ------- */
+    .header-text{
+        margin-top: 50%;
+        font-size: 16px;
+    }
+
+    /* ------- About ------- */
+    .sub-title{
+        font-size: 40px;
+    }
+
+    .about-col-1{
+        flex-basis: 100%;
+        padding: 0 25%;
+        align-items: center/* Center the content horizontally */
+    }
+    .about-col-2{
+        flex-basis: 100%;
+    }
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+    .about-col-2{
+        font-size: 14px;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+
+
+    /* ------- Notes ------- */
+    /* ------- Contact ------- */
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+
+    .copyright{
+        font-size: 14px;
+    }
+}
