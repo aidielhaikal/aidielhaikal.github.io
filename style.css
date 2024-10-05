@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
 }
 /* scrolling animation when user click reference */
@@ -32,11 +32,12 @@ body{
 #header{
     width: 100%;
     height: 100vh;
-    background-image: url(images/background.jpg);
+    background-image: url(images/background2.jpg);
     background-size: cover;
     background-position: center;
     position: relative;
 }
+/* Add a semi-transparent overlay */
 #header::before {
     content: "";
     position: absolute;
@@ -44,8 +45,8 @@ body{
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)); /* Adjust the opacity (0.5) as needed */
+    z-index: 0; 
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)); /* Adjust the opacity (0.5) as needed */
   }
 #header .container{
     padding: 10px 10%; 
@@ -71,19 +72,24 @@ body{
     position: relative;
     z-index: 2;
 }
-.header-text h1{
-    font-size: 80px;
+/* Header styling */
+.header-text h1 { 
+    font-size: 100px;
     text-align: center;
     color: white;
-    margin-top: 3.5%;
+    margin-top: 2%;
     margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif; /* Main heading uses Montserrat */
 }
-.header-text p{
+/* Subtitle styling */
+.header-text p {
     font-size: 35px;
     text-align: center;
     color: white;
     font-style: italic;
+    font-family: 'Roboto', sans-serif; /* Subtitle uses Roboto */
 }
+
 /* Media Query for Smaller Screens */
 @media (max-width: 768px) {
     #header{
@@ -91,7 +97,7 @@ body{
         height: 100vh;
     }
     #header::before {
-        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)); /* Adjust opacity for smaller screens */
+        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)); /* Adjust the opacity (0.5) as needed */
     }
     .profile-picture img {
         margin-top: 25%;
@@ -105,7 +111,8 @@ body{
         font-size: 60px;
     }
     .header-text p {
-        font-size: 25px;
+        margin-top: 5%;
+        font-size: 24px;
     }
 }
 
@@ -179,7 +186,7 @@ nav .fa-solid{
     nav ul{
         margin-left: 0;
         margin-top: 0;
-        background: darkgoldenrod;
+        background: rgb(120, 167, 33);
         position: fixed;
         top: 0;
         left: -200px;
@@ -222,21 +229,21 @@ nav .fa-solid{
     flex-wrap: wrap;
 }
 #about .col-1{
-    margin-top: 5%;
+    margin-top: 2.5%;
     flex-basis: 35%;
 }
 #about .col-1 img{
     margin-left: 7.5%;
     width: 80%;
-    border-radius: 50%;
+    border-radius: 10%;
     border: 10px solid white;
 }
 #about .social-icons{
-    margin-top: 30px;
+    margin-top: 10px;
     text-align: center;
 }
 #about .col-1 a:hover{
-    color: darkgoldenrod;
+    color: rgb(134, 188, 37);
     transform: translateY(-5px);
     transition: 0.5s;
 }
@@ -248,16 +255,16 @@ nav .fa-solid{
     display: inline-block;
 }
 #about .col-2{
-    margin-top: 5%;
+    margin-top: 2.5%;
     flex-basis: 62.5%;
 }
 #about .col-2-sub-title{
-    font-size: 40px;
+    font-size: 30px;
     color: #303030;
 }
 #about .col-2-description{
     margin-top: 20px;
-    font-weight: bold;
+    /* font-weight: bold; */
     font-size: 20px;
     color: #303030;
 }
@@ -267,8 +274,12 @@ nav .fa-solid{
 }
 #about .first-list{
     list-style-type: none;
-    margin-top: 40px;
+    margin-top: 30px;
     color: #303030;
+}
+#about .first-item{
+    font-weight: bold;
+    margin-top: 10px;
 }
 #about .second-list li {
     color: #303030;
@@ -285,15 +296,15 @@ nav .fa-solid{
     #about .col-1 img{
         align-items: center;
         margin-left: 0%;
-        margin-top: 10%;
+        margin-top: 15%;
         width: 100%;
-        border-radius: 50%;
+        border-radius: 10%;
         border: 10px solid white;
     }
     #about .social-icons{
         margin-top: 10px;
         text-align: center;
-        margin-left: 10px;
+        margin-left: 15px;
     }
     #about .col-2{
         flex-basis: 100%;
@@ -328,7 +339,7 @@ nav .fa-solid{
     margin-bottom: 100px;
 }
 .notes-list div{
-    background: lightgoldenrodyellow;
+    background: rgb(218, 255, 149);
     padding: 40px;
     font-size: 13px;
     font-weight: 300;
@@ -356,7 +367,7 @@ nav .fa-solid{
     display: inline-block;
 }
 .notes-list div:hover{
-    background: darkgoldenrod;
+    background: rgb(112, 156, 29);
     color: white;
     transform: translateY(-10px);
 }
@@ -368,24 +379,61 @@ nav .fa-solid{
 .notes-list div a:hover{
     text-decoration: underline;
     font-weight: bold;
-    color: gold;
+    color: rgb(210, 255, 127);
 }
 /* Media Query for Smaller Screens */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     #notes .container{
         padding-top: 20%;
     }
-}
+} */
+@media (max-width: 768px) {
+    #notes .container {
+        padding-top: 17.5%; /* Reduce top padding */
+        padding-bottom: 10%; /* Reduce bottom padding */
+    }
+    
+    .notes-list {
+        grid-template-columns: 1fr; /* Change to one column layout */
+        grid-gap: 20px; /* Reduce the gap between notes sections */
+        margin-top: 10px; /* Reduce bottom margin */
+        margin-bottom: 10px; /* Reduce bottom margin */
+    }
+    
+    .notes-list div {
+        padding: 20px; /* Reduce padding inside the notes */
+        font-size: 12px; /* Reduce font size */
+    }
 
+    .notes-list div i {
+        font-size: 30px; /* Reduce the icon size */
+        margin-bottom: 10px; /* Reduce margin below the icon */
+    }
+
+    .notes-list div h2 {
+        font-size: 20px; /* Reduce heading font size */
+        margin-bottom: 10px; /* Reduce margin below heading */
+    }
+
+    .notes-list div a {
+        font-size: 10px; /* Reduce link font size */
+        margin-top: 15px; /* Adjust margin for link */
+    }
+
+    #notes .container .sub-title {
+        padding: 0 5%; 
+    }
+}
 
 /* -------------- Contact ----------------- */
 #contact{
     /* height: 100vh; */
-    background-image: url(images/map2.jpg);
+    background-image: url(images/map4.jpg);
     background-size: cover;
 }
 #contact .container{
-    padding: 120px 5%;
+    /* padding: 120px 5%; */
+    padding: 5% 5%;
 } 
 #contact .row{
     display: flex;
@@ -421,26 +469,26 @@ nav .fa-solid{
     transition: 0.5s;
 }
 .social-icons a:hover{
-    color: gold;
+    color: rgb(134, 188, 37);
     transform: translateY(-5px);
 }
 .contact-left .btn.btn2{
     margin-top: 5%;
     padding: 15px 40px;
     display: inline-block;
-    background: gold;
-    color: black;
+    background: rgb(134, 188, 37);
+    color: white;
     font-weight: bold;
     border-radius: 10px;
     text-decoration: none;
 }
 .btn.btn2:hover{
-    background: rgb(207, 167, 66);
+    background: rgb(91, 151, 0);
     transition: 0.25s;
 }
 
 #contact .contact-right{
-    margin-top: 6%;
+    margin-top: 9%;
     flex-basis: 55%;
 }
 .contact-right form{
@@ -458,17 +506,17 @@ form input, form textarea{
     border-radius: 6px;
 }
 .contact-right .btn.btn2{
-    margin-top: 5%;
+    margin-top: 1%;
     padding: 15px 70px;
     display: inline-block;
-    background: gold;
-    color: black;
+    background: rgb(134, 188, 37);
+    color: white;
     font-weight: bold;
     border-radius: 10px;
     text-decoration: none;
 }
 .contact-right .btn.btn2:hover{
-    background: rgb(207, 167, 66);
+    background: rgb(91, 151, 0);
     transition: 0.25s;
 }
 form .btn2{ 
@@ -484,7 +532,7 @@ form .btn2{
     background: whitesmoke;
     font-weight: 300;
 }
-/* Media Query for Smaller Screens */
+
 /* Media Query for Smaller Screens */
 @media (max-width: 768px) {
     #contact {
@@ -497,6 +545,7 @@ form .btn2{
         flex-basis: 100%;
     }
     #contact .contact-right{
+        margin-top: 10px;
         flex-basis: 100%;
     }
     .contact-left .sub-title {
@@ -512,12 +561,17 @@ form .btn2{
         font-size: 15px;
     }
     .contact-left .btn.btn2 {
-        margin-top: 20%;
+        margin-top: 7.5%;
         font-size: 14px;
     }
-    form input, form textarea {
+    form input {
         font-size: 14px;
-        margin: 15px 0; /* Remove this line */
+        margin: 10px 0; /* Remove this line */
+    }
+    form textarea {
+        height: 100px;
+        font-size: 14px;
+        margin: 10px 0; /* Remove this line */
     }
     .contact-right .btn.btn2 {
         padding: 13.5px 63px;
